@@ -1,0 +1,32 @@
+body {
+    background: #eee;
+}
+
+#nav {
+    background: green;
+}
+
+
+#col1a {
+    border: dashed black 2px;
+    padding: 75px;
+    margin-top: 10px;
+}
+
+#col1b {
+    border: dashed black 2px;
+    padding: 75px;
+    margin-top: 10px;
+}
+
+#col1c {
+    border: dashed black 2px;
+    padding: 75px;
+    margin-top: 10px;
+}
+
+#footer {
+    border: dashed black 2px;
+    padding: 75px; 
+    margin-top: 10px;  
+}
