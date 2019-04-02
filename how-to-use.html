@@ -21,8 +21,8 @@
 <body>
     <div class="container">
         <!--Navbar-->
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light col-md-12" id = "nav">
+        <div class="row" id="nav">
+            <nav class="navbar navbar-expand-lg navbar-light col-md-12">
                 <a class="navbar-brand" href="#">Product Genie</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -57,52 +57,7 @@
                 </div>
             </nav>
         </div>
-        <!--Current searches and pricing range slider-->
-        <div class="row">
-            <div class="col-md-12">
-                <h5>Current Search: <span id="currentSearch"></span></h5>
-                <div class="slidecontainer">
-                    <input type="range" min="1" max="100" value="50" class="slider" id="priceslider">
-                </div>
-            </div>
-        </div>
-        <!--Test for pricing filter-->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="filterDropdown">
-                    <button class="filterbtn">Dropdown</button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                        <a href="#about">$0-$500</a>
-                        <a href="#base">$500-$1000</a>
-                        <a href="#blog">$1000-$1500</a>
-                        <a href="#contact">$1500-$2000</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--------------------------------------------------------->
-        <div class="row" id="row1">
-            <div class="col-md-2" id="col1a">
-                Video reviews here?
-            </div>
-            <div class="col-md-5" id="col1b">
-                Amazon here?
-            </div>
-            <div class="col-md-5" id="col1c">
-                Ebay here?
-            </div>
-        </div>
-        <div class="row" id="row1">
-            <div class="col-md-2" id="col1a">
-                Written reviews here?
-            </div>
-            <div class="col-md-5" id="col1b">
-                Amazon here?
-            </div>
-            <div class="col-md-5" id="col1c">
-                Ebay here?
-            </div>
+
             <div class="col-md-12 text-center" id="footer">
                 Footer
             </div>
