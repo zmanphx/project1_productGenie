@@ -23,38 +23,23 @@ $(document).ready(function () {
   });
 
 
-//On click to append recentSearch to currentSearch
-//var ref = database.ref().child("RecentSearch");
-//ref.on('child_added' function(childsnapshot, prevChildName) {
+  //On click to append recentSearch to currentSearch
+  database.ref().on("child_added", function(childSnapshot) {
+    // Log everything that's coming out of snapshot
+    console.log(childSnapshot);
 
-//})
+    
+    // do stuff here 
+    
+  }, function(errorObject) {
+    console.log("Errors handled: " + errorObject.code);
+  });
 
 
+  //Possible starting point for price range filter taking the variable of data and creating a function.
+  //Price needs to be the name of the returned price from API's
+  //data.filter(function(x){ return x.Price >= 250 && x.Price <= 800});
 
-//Possible starting point for price range filter taking the variable of data and creating a function.
-//Price needs to be the name of the returned price from API's
-//data.filter(function(x){ return x.Price >= 250 && x.Price <= 800});
+  //Functionality for price dropdown
 
-//Functionality for price dropdown
-$("#dropbtn").on('click', myFunction(), filterFunction()) 
-
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("");
-};
-
-function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-    txtValue = a[i].textContent || a[i].innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      a[i].style.display = "";
-    } else {
-      a[i].style.display = "none";
-    };
-  };
-};
 });

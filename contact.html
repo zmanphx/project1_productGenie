@@ -12,58 +12,95 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!--Firebase CDN-->
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-    <!--CSS link-->
+    <!--CSS link and Google Fonts-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <!--Javascript link-->
     <script src="assets/javascript/app.js"></script>
 </head>
 
 <body>
-    <div class="container">
-        <!--Navbar-->
-        <div class="row" id="nav">
-            <nav class="navbar navbar-expand-lg navbar-light col-md-12">
-                <a class="navbar-brand" href="#">Product Genie</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!--Navbar-->
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light col-md-12" id="nav">
+            <h2 class="navbar-brand">Product Genie</h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="how-to-use.html">About <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="faq.html">FAQ <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
-                        </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true"></a>
-                        </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search product here"
-                            aria-label="Search" id="search-input">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-        </div>
-
-            <div class="col-md-12 text-center" id="footer">
-                Footer
+                    <li class="nav-item">
+                        <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                    </li>
+                </ul>
+                <p>Return to home to search for products</p>
+            </div>
+        </nav>
+    </div>
+    <div class="container" id="formBox">
+        <h1 class = "heading">Developers</h1>
+        <hr>
+        <!--Form 1-->
+        <div class="row">
+            <div class="col-md-4">
+                    <h2 class = "name">Chris Davis</h2>
+                <img src="assets/images/Portfolio.jpg" id="chris">
+            </div>
+            <div class="col-md-4">
+                    <h2 class = "name">Ford Crosby</h2>
+                <img placeholder="#" id="chris">
+            </div>
+            <div class="col-md-4">
+                    <h2 class = "name">Mike Hageali</h2>
+                <img placeholder="#" id="chris">
             </div>
         </div>
+
+        <div class="row">
+            <ul>
+                <li><p>For any questions please feel free to submit any inquires or feedback by submitting your name, email, and message in the form below.</p></li>
+            </ul>
+                <div class="col-md-6" id = "cardBox">
+                <form class="contactForm">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <form class="contactForm">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class="form-group">
+                            <p>Message</p>
+                            <textarea name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
+            </div>
+            <div class = "col-md-6">
+            
+            </div>
     </div>
-    </nav>
+</div>
+
+        <div class="row">
+            <div class="col-md-12 text-center" id="footer">
+                    Intended for educational purposes
+                </div>
 </body>
 
 </html>

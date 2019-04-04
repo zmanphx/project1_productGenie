@@ -12,18 +12,18 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!--Firebase CDN-->
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
-    <!--CSS link-->
+    <!--CSS link and Google Fonts-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <!--Javascript link-->
     <script src="assets/javascript/app.js"></script>
 </head>
 
 <body>
-    <div class="container">
         <!--Navbar-->
-        <div class="row" id="nav">
-            <nav class="navbar navbar-expand-lg navbar-light col-md-12">
-                <a class="navbar-brand" href="#">Product Genie</a>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light col-md-12" id="nav">
+                <h2 class="navbar-brand">Product Genie</h2>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -33,37 +33,60 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="how-to-use.html">About <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="faq.html">FAQ</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="faq.html">FAQ <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="contact.html">Contact <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true"></a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search product here"
-                            aria-label="Search" id="search-input">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="submit">Search</button>
-                    </form>
+                    <p>Return to home to search for products</p>
                 </div>
             </nav>
         </div>
-
-            <div class="col-md-12 text-center" id="footer">
-                Footer
-            </div>
-        </div>
+    <div class = "container">
+        <h1 class = "heading">FAQ's</h1>
+        <hr>
+        <ol id = "faqList">
+            <li>How do I use Product Genie?</li>
+            <ul>
+            <li>Type in the name of the product you would like to find prices and reviews for with the search box
+                 in the top right of the home page.</li>
+            </ul>
+            <br>
+            <li>How does Product Genie work?</li>
+            <ul>
+            <li>Upon searching for a product, Genie will find 20 different results from different sources so that 
+                you can find the best prices for you with written and video reviews for the product you search for.
+                You can also use the price filter dropdown to narrow down your search based on how much is in your budget.
+            </li>
+            </ul>
+            <br>            
+            <li>Where does Genies' information come from?</li>
+            <ul>
+            <li>Product Genie uses 3 API's(Aliseeks, Google, Youtube) to search from a large variety of other sites
+                to find different vendors and reviews.</li>
+            </ul>
+            <br>
+            <li>Who should use this?</li>
+            <ul>
+            <li>Anyone that is looking for a specific product and is still trying to figure out which vendor to purchase
+                it from or that is looking to search within a certain price range.</li>
+            </ul>
+        </ol>
     </div>
-    </nav>
+</div>
+    <div class = "row">
+            <div class="col-md-12 text-center" id="footer">
+                    Intended for educational purposes
+        </div>
+        </div>
 </body>
 
 </html>
