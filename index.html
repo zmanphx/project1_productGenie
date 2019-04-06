@@ -21,78 +21,81 @@
 </head>
 
 <body>
-        <!--Navbar-->
-        <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light col-md-12" id="nav">
-                <h2 class="navbar-brand text-white">Product Genie</h2>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <!--Navbar-->
+    <div class="row">
+        <nav class="navbar navbar-expand-lg navbar-light col-md-12" id="nav">
+            <h2 class="navbar-brand text-white">Product Genie</h2>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="faq.html">FAQ</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link text-white" href="contact.html">Contact</a>
-                        </li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="contact.html">Contact</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true"></a>
-                        </li>
-                    </ul>
-                    <div class="dropdown">
-                            <button class="filterbtn">Price Filter</button>
-                            <div class="dropdown-content">
-                              <a href = "#">$1-$500</a>
-                              <a href = "#">$500-$1000</a>
-                              <a href = "#">$1000-$1500</a>
-                              <a href = "#">$1500-$2000</a>
-                              <a href = "#">$2000-$2500</a>
-                              <input type = "text" placeholder = "Other Amount">
-                            </div>
-                          </div>
-                    <form class="form-inline my-2 my-lg-0" id = "searchBox">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search product here"
-                            aria-label="Search" id="search-input">
-                        <button class="btn btn-outline-success my-2 my-sm-0" id="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-        </div>
-    <div class = "container">
-        <!--Test for pricing filter-->
-        <div class = "row">
-                <div class = "col-md-12" id = "writtenReviewsBox">
-                    Written Reviews
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                    </li>
+                </ul>
+                <!--Submit Button-->
+                <form class="form-inline my-2 my-lg-0" id="searchBox">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search product here"
+                        aria-label="Search" id="search-input">
+                    <button class="btn btn-outline-success my-2 my-sm-0" id="submit">Search</button>
+                </form>
             </div>
-        <!--------------------------------------------------------->
-        <div class = "row">
-                <div class = "col-md-4" id = "aliseeksBox">
-                        Aliseeks
-                    </div>
-                    <div class = "col-md-4" id = "ebayBox">
-                        Ebay
-                    </div>
-            <div class = "col-md-4" id = "videoBox">
-                Video Reviews
+        </nav>
+    </div>
+    <div class="container">
+        <!--Recent Searches Box-->
+        <div class="row">
+            <div class="col-md-12" id="sessionSearch">
+                <p>Recent Searches</p>
+                <div id=searchesHere>
+
+
+                </div>
+
                 <hr>
             </div>
         </div>
-        <div class="row" id = "currentSearchBox">
-                <div class="col-md-12">
-                    <h5>You might also like:</h5>
-                </div>
+        <!--Aliseek API Box-->
+        <div class="row">
+            <div class="col-md-12" id="aliseeksBox">
+                Ali Express
+                <hr>
             </div>
-    </div>
-        <div class = "row">
+        </div>
+        <!--Ebay API Box-->
+        <div class="row">
+            <div class="col-md-12" id="ebayBox">
+                Ebay
+                <hr>
+            </div>
+        </div>
+        <!--Video Box-->
+        <div class="row">
+            <div class="col-md-6" id="videoBox">
+                Additional Video
+                <hr>
+            </div>
+            <!--Reviews Box-->
+            <div class="col-md-6" id="writtenReviewsBox">
+                Reviews
+                <hr>
+            </div>
+        </div>
+        <!--Footer-->
+        <div class="row">
             <div class="col-md-12 text-center" id="footer">
                 Intended for educational purposes
             </div>
