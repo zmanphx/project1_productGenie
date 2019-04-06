@@ -32,8 +32,8 @@
 
   .container {
     margin-top: 50px;
-    border: solid #ffffff 10px;
-    background: dodgerblue;
+    border: solid #ffffff 5px;
+    background: #777;
     border-radius: 5px;
     box-shadow: 10px 10px 5px black;
 
@@ -163,6 +163,27 @@ textarea {
 body {
 	-webkit-animation: color-change-2x 2s linear infinite alternate both;
 	        animation: color-change-2x 2s linear infinite alternate both;
+}
+
+
+#aliseeks {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  min-height: 40vh;
+}
+
+#context-content {
+  min-height: 40vh;
+}
+
+#sessionSearch {
+border-bottom: solid #ffffff 2px;
+}
+
+#gifDiv {
+  padding-top: 20px;
+  margin-top: 20px;
 }
 
 /* ----------------------------------------------

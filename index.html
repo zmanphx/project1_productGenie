@@ -4,12 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project 1</title>
+    <title>Product Genie v1.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Boostrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!--jQuery CDN-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!--Firebase CDN-->
     <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
     <!--CSS links and Google Fonts-->
@@ -17,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="assets/css/animista.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <!--Javascript link-->
-    <script src="assets/javascript/app.js"></script>
 </head>
 
 <body>
@@ -65,33 +62,33 @@
 
                 </div>
 
-                <hr>
+                
             </div>
         </div>
         <!--Aliseek API Box-->
         <div class="row">
-            <div class="col-md-12" id="aliseeksBox">
+            <div class="col-md-12 mt-20" id="aliseeks">
                 Ali Express
-                <hr>
+                
             </div>
         </div>
-        <!--Ebay API Box-->
+        <!--Contextual Websearch API Box-->
         <div class="row">
-            <div class="col-md-12" id="ebayBox">
-                Ebay
-                <hr>
+            <div class="col-md-12 bg-light text-dark" id="context-content">
+                Contextual Websearch
+                
             </div>
         </div>
         <!--Video Box-->
         <div class="row">
             <div class="col-md-6" id="videoBox">
                 Additional Video
-                <hr>
+                
             </div>
             <!--Reviews Box-->
             <div class="col-md-6" id="writtenReviewsBox">
                 Reviews
-                <hr>
+                
             </div>
         </div>
         <!--Footer-->
@@ -101,6 +98,19 @@
             </div>
         </div>
     </div>
+
+    <!-- jQuery JS -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <!-- Bootstrap jQuery from cloudflare -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Our JS file for app logic-->
+  <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/apilogic.js"></script>
+  <script src="assets/javascript/apilogic2.js"></script>
 </body>
 
 </html>
