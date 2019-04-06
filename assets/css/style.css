@@ -27,7 +27,7 @@
   }
 
   #currentSearchBox {
-    height: 100px;
+    height: 200px;
   }
 
   .container {
@@ -101,17 +101,17 @@
 
 #aliseeksBox {
   border: solid #ffffff 2px;
-  height: 500px;
+  height: 200px;
 }
 #ebayBox {
   border: solid #ffffff 2px;
-  height: 500px;
+  height: 200px;
 }
 
 #writtenReviewsBox {
   border: solid #ffffff 2px;
-  height: 100px;
-  display: none;
+  height: 500px;
+  display: show;
 }
 /*Styling for forms*/
 
