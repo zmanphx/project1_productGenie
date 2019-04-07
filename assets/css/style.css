@@ -7,9 +7,10 @@
     }
 
   #nav {
-    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);      border: solid blue 10px;
-      height: 75px;
-      }
+    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);
+    border: solid blue 5px;
+    height: 100px;
+    }
 
   #submit {
       background: dodgerblue;
@@ -19,6 +20,7 @@
   .navbar-brand {
       font-family: garamond;
       font-size: 40px;
+      padding-left: 20px;
       color: #ffffff
   }
 
@@ -32,8 +34,8 @@
 
   .container {
     margin-top: 50px;
-    border: solid #ffffff 5px;
-    background: #777;
+    border: solid #ffffff 2px;
+    background: linear-gradient(to bottom right, #b2b2b2 40%, #a4b5af 118%);
     border-radius: 5px;
     box-shadow: 10px 10px 5px black;
 
@@ -88,9 +90,9 @@
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
-  #productBox {
-    border: solid #ffffff 5px;
-  }
+#productBox {
+  border: solid #ffffff 5px;
+}
 
 /*styling for results from aliseeks, youtube, and ebay*/
 
@@ -155,8 +157,8 @@ textarea {
 }
 
 #footer {
-    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);      border: solid blue 10px;
-    border: solid blue 10px;
+    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);
+    border: solid blue 5px;
     padding: 60px;
     height: 50px;
 }
@@ -170,11 +172,15 @@ body {
   display: flex;
   flex-flow: row nowrap;
   overflow-x: auto;
-  min-height: 40vh;
+  min-height: 30vh;
+  background-image: url("../images/Aliexpress_logoR.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #context-content {
-  min-height: 40vh;
+  min-height: 30vh;
+  background-image: url("../images/icon_contextualweb.png");
 }
 
 #sessionSearch {
@@ -184,6 +190,25 @@ border-bottom: solid #ffffff 2px;
 #gifDiv {
   padding-top: 20px;
   margin-top: 20px;
+}
+#writtenReviewsBox {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+}
+
+.searchImg {
+  margin-top: 15px;
+}
+
+.infoLink {
+  margin-top: 0;
+  padding-top: -5px;
+  color: red;
+}
+
+.itemPrice {
+  color: #000066;
 }
 
 /* ----------------------------------------------
