@@ -50,6 +50,15 @@ $(document).ready(function () {
   //**********************************************************************************/
 
 
+
+  //***********************************************************
+mytest.text = searchItem;
+mytest.priceRange.from = $("#from").val();
+mytest.priceRange.to = $("#To").val();
+//**********************************************************
+
+
+
   //On click to append recentSearch to currentSearch
   searchRef.on(
     "value",

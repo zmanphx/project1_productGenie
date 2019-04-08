@@ -1,185 +1,3 @@
-/*Body, navbar, and container styling*/
-
-  body {
-      background: #777;
-      color: white;
-      font-family: 'Roboto Condensed', sans-serif;
-    }
-
-  #nav {
-    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);
-    border: solid blue 5px;
-    height: 100px;
-    }
-
-  #submit {
-      background: dodgerblue;
-      color: #ffffff;
-  }
-
-  .navbar-brand {
-      font-family: garamond;
-      font-size: 40px;
-      padding-left: 20px;
-      color: #ffffff
-  }
-
-  #navbarSupportedContent {
-    color: #ffffff
-  }
-
-  #currentSearchBox {
-    height: 200px;
-  }
-
-  .container {
-    margin-top: 50px;
-    border: solid #ffffff 2px;
-    background: linear-gradient(to bottom right, #b2b2b2 40%, #a4b5af 118%);
-    border-radius: 5px;
-    box-shadow: 10px 10px 5px black;
-
-  }
-
-
-
-
-
-/*styling for results from aliseeks, reviews, and contextual web*/
-
-
-#aliseeksBox {
-  border: solid #ffffff 2px;
-  height: 200px;
-}
-#ebayBox {
-  border: solid #ffffff 2px;
-  height: 200px;
-}
-
-#writtenReviewsBox {
-  border: solid #ffffff 2px;
-  height: 200px;
-  display: show;
-}
-
-
-
-
-
-/*Styling for forms*/
-
-.heading {
-  position: relative;
-  top: 50px;
-}
-
-#formBox {
-  margin-top: 50px;
-  border: solid #ffffff 10px;
-}
-
-#cardBox {
-  border: solid #777 2px;
-}
-
-.contactForm {
-  margin: 50px;
-}
-
-#developer {
-  height: 200px;
-  width: 200px;
-  border: solid #777 4px;
-  padding: 10px;
-  background: #ffffff;
-  position: relative;
-  right: -50px;
-  margin-bottom: 40px;
-}
-
-.name {
-  position: relative;
-  right: -50px;
-}
-
-textarea {
-  width: 400px;
-  height: 200px;
-}
-
-
-
-
-
-
-/*Styling for footer*/
-
-#footer {
-    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);
-    border: solid blue 5px;
-    padding: 60px;
-    height: 50px;
-}
-
-
-
-
-/*Additional styling for integrate API's*/
-
-body {
-	-webkit-animation: color-change-2x 2s linear infinite alternate both;
-	        animation: color-change-2x 2s linear infinite alternate both;
-}
-
-
-#aliseeks {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow-x: auto;
-  min-height: 30vh;
-  background-image: url("../images/Aliexpress_logoR.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-#context-content {
-  min-height: 30vh;
-  background-image: url("../images/icon_contextualweb.png" );
-  background-repeat: no-repeat;
-  background-position: center;
-}
- 
-#sessionSearch {
-border-bottom: solid #ffffff 2px;
-}
-
-#gifDiv {
-  padding-top: 20px;
-  margin-top: 20px;
-}
-#writtenReviewsBox {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow-x: auto;
-}
-
-.searchImg {
-  margin-top: 15px;
-}
-
-.infoLink {
-  margin-top: 0;
-  padding-top: -5px;
-  color: red;
-}
-
-.itemPrice {
-  color: #000066;
-}
-
-
-
 /*All Animista that applies to all html files*/
 
 
@@ -377,3 +195,188 @@ border-bottom: solid #ffffff 2px;
             animation-timing-function: ease-out;
   }
 }
+
+
+
+/*Body, navbar, and container styling*/
+
+  body {
+      background: #777;
+      color: white;
+      font-family: 'Roboto Condensed', sans-serif;
+    }
+
+  #nav {
+    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);
+    border: solid blue 5px;
+    height: 100px;
+    }
+
+  #submit {
+      background: dodgerblue;
+      color: #ffffff;
+  }
+
+  .navbar-brand {
+      font-family: garamond;
+      font-size: 40px;
+      padding-left: 20px;
+      color: #ffffff
+  }
+
+  #navbarSupportedContent {
+    color: #ffffff
+  }
+
+  #currentSearchBox {
+    height: 200px;
+  }
+
+  .container {
+    margin-top: 50px;
+    border: solid #ffffff 2px;
+    background: linear-gradient(to bottom right, #b2b2b2 40%, #a4b5af 118%);
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px black;
+
+  }
+
+
+
+
+
+/*styling for results from aliseeks, reviews, and contextual web*/
+
+
+#aliseeksBox {
+  border: solid #ffffff 2px;
+  height: 200px;
+}
+#ebayBox {
+  border: solid #ffffff 2px;
+  height: 200px;
+}
+
+#writtenReviewsBox {
+  border: solid #ffffff 2px;
+  height: 200px;
+  display: show;
+}
+
+
+
+
+
+/*Styling for forms*/
+
+.heading {
+  position: relative;
+  top: 50px;
+}
+
+#formBox {
+  margin-top: 50px;
+  border: solid #ffffff 10px;
+}
+
+#cardBox {
+  border: solid #777 2px;
+}
+
+.contactForm {
+  margin: 50px;
+}
+
+#developer {
+  height: 200px;
+  width: 200px;
+  border: solid #777 4px;
+  padding: 10px;
+  background: #ffffff;
+  position: relative;
+  right: -50px;
+  margin-bottom: 40px;
+}
+
+.name {
+  position: relative;
+  right: -50px;
+}
+
+textarea {
+  width: 400px;
+  height: 200px;
+}
+
+
+
+
+
+
+/*Styling for footer*/
+
+#footer {
+    background-image: -webkit-linear-gradient(top, dodgerblue 0%, navy 100%);
+    border: solid blue 5px;
+    padding: 60px;
+    height: 50px;
+}
+
+
+
+
+/*Additional styling for integrate API's*/
+
+body {
+	-webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+}
+
+
+#aliseeks {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+  min-height: 30vh;
+  background-image: url("../images/Aliexpress_logoR.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#context-content {
+  min-height: 30vh;
+  background-image: url("../images/icon_contextualweb.png" );
+  background-repeat: no-repeat;
+  background-position: center;
+}
+ 
+#sessionSearch {
+border-bottom: solid #ffffff 2px;
+}
+
+#gifDiv {
+  padding-top: 20px;
+  margin-top: 20px;
+}
+#writtenReviewsBox {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: auto;
+}
+
+.searchImg {
+  margin-top: 15px;
+}
+
+.infoLink {
+  margin-top: 0;
+  padding-top: -5px;
+  color: red;
+}
+
+.itemPrice {
+  color: #000066;
+}
+
+
+
