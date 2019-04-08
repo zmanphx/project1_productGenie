@@ -14,11 +14,12 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="assets/css/animista.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
-    <!--Javascript link-->
 </head>
 
 <body>
+
     <!--Navbar-->
+
     <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light col-md-12" id="nav">
             <h2 class="navbar-brand text-white">Product Genie</h2>
@@ -43,7 +44,9 @@
                         <a class="nav-link enabled" href="#" tabindex="-1" aria-disabled="true"></a>
                     </li>
                 </ul>
+
                 <!--Submit Button-->
+
                 <form class="form-inline my-2 my-lg-0" id="searchBox">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search product here"
                         aria-label="Search" id="search-input">
@@ -53,7 +56,9 @@
         </nav>
     </div>
     <div class="container">
+
         <!--Recent Searches Box-->
+
         <div class="row">
             <div class="col-md-12" id="sessionSearch">
                 <p>Recent Searches</p>
@@ -62,50 +67,68 @@
 
                 </div>
 
-                
+
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-12" id = "aliseeksBox">
+                    <form>
+                            <h4>Price Range</h4>
+                            <label for="From" style= "width:50px" >From:</label> 
+                            <input type="number"  pattern="(d{3})([.])(d{2})" name="From:" id="from"  />
+                            <label for="To" style= "width:50px" >To:</label> 
+                            <input type="number" pattern="(d{3})([.])(d{2})" name="To:" id="To" />
+                           
+                            <input type="submit" id="submit" />
+                          </form>
             </div>
         </div>
         <!--Aliseek API Box-->
+
         <div class="row">
+
             <div class="col-md-12 mt-20" id="aliseeks">
                 Ali Express
-                
+
+            </div>
+        </div>
+        <!--review Box-->
+
+        <div class="row">
+
+            <!--Reviews Box-->
+
+            <div class="col-12" id="writtenReviewsBox">
+                Reviews
+
             </div>
         </div>
         <!--Contextual Websearch API Box-->
         <div class="row">
             <div class="col-md-12 bg-white text-dark" id="context-content">
                 Contextual Websearch
-                
-            </div>
-        </div>
-        <!--review Box-->
-        <div class="row">
-            <!--Reviews Box-->
-            <div class="col-12" id="writtenReviewsBox">
-                Reviews
-                
-            </div>
-        </div>
-        <!--Footer-->
-        <div class="row">
-            <div class="col-md-12 text-center" id="footer">
-                Intended for educational purposes
+
             </div>
         </div>
     </div>
+    <!--Footer-->
+    <div class="row">
+        <div class="col-md-12 text-center" id="footer">
+            Intended for educational purposes
+        </div>
+    </div>
+    </div>
 
     <!-- jQuery JS -->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <!-- Bootstrap jQuery from cloudflare -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Bootstrap jQuery from cloudflare -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Our JS file for app logic-->
-  <script src="assets/javascript/app.js"></script>
-  <script src="assets/javascript/apilogic.js"></script>
+    <!-- Our JS file for app logic-->
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/apilogic.js"></script>
 
 </body>
 

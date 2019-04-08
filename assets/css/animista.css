@@ -1,4 +1,7 @@
 /*Animista*/
+
+/*Animation for Product Genie brand*/
+
 .navbar-brand {
 	-webkit-animation: slide-in-elliptic-top-fwd 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-elliptic-top-fwd 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -47,6 +50,12 @@
   }
 }
 
+
+/**********************************************************************************/
+
+
+/*Animation for color changing background*/
+
 body {
 	-webkit-animation: color-change-4x 6s linear infinite alternate both;
 	        animation: color-change-4x 6s linear infinite alternate both;
@@ -90,6 +99,12 @@ body {
       background: #f5be10;
     }
   }
+
+
+/**********************************************************************************/
+
+
+/*Animation for search box to fade in on load*/
 
   #searchBox {
     -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
