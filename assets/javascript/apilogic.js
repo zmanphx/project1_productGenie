@@ -8,6 +8,10 @@ $("#submit").on("click", function () {
   searchContextWeb();
 });
 
+
+//*********************************************************************************/
+
+
 // function to call AliExpress api and render results  
 function searchAliExpress() {
 
@@ -32,8 +36,13 @@ function searchAliExpress() {
     "sort": "BEST_MATCH",
     "skip": 20
   };
+
   mytest.text = item;
   //mytest.text = "radio";
+
+
+  //*********************************************************************************/
+
 
   // build api request
   var settings = {
@@ -54,6 +63,10 @@ function searchAliExpress() {
   }
   // '{\n  "text": "battery backup",\n  "priceRange": {\n    "from": 12.50,\n    "to": 30.00\n  },\n  "shipToCountry": "US",\n  "shipFromCountry": "CN",\n  "sort": "BEST_MATCH",\n  "skip": 20\n}'
 
+
+  //*********************************************************************************/
+
+
   // call the api
   $.ajax(settings).done(function (response) {
 
@@ -62,6 +75,7 @@ function searchAliExpress() {
     // console.log("checking " + response.items[0].title);
 
     var results = response;
+
     console.log(results);
 
     for (var i = 0; i < 10; i++) {
@@ -81,17 +95,22 @@ function searchAliExpress() {
 
 
       var pTitle = $("<p>").addClass("itemTitle").text("Title: " + response.items[i].title);
+
       pTitle.css("width", "300px");
+
       var pPrice = $("<p>").addClass("itemPrice").html("Price: $" + response.items[i].priceOptions[0].amount.value + " " + "<b> Rating:</b> " + response.items[i].ratings + " ");
 
       // pPrice.append(anch);
       var itemImage = $("<img>").addClass("searchImg");
+
       itemImage.attr("src", response.items[i].imageUrl);
+
       itemImage.attr({
         height: "250px",
         width: "250px"
       });
-      itemImage.attr( "itemId", response.items[i].id);
+
+      itemImage.attr("itemId", response.items[i].id);
 
       gifDiv.prepend(anch);
       gifDiv.prepend(pPrice);
@@ -103,25 +122,28 @@ function searchAliExpress() {
   });
 }
 
-/// new click event here for reviews
+
+//*********************************************************************************/
+
+
+//new click event here for reviews
 $(document).on("click", ".searchImg", function (event) {
+
   event.preventDefault();
   //event.stopPropagation();
 
   if (event.target.localName == "img") {
 
     $(".reviewDiv").empty();
-    event.stopPropagation();
 
+    event.stopPropagation();
 
     var mytestReview = {
       productId: "32844651460",
       page: 1
     }
 
-
     mytestReview.productId = $(this).attr("itemId");
-
 
     var settingsReviews = {
       url: "https://api.aliseeks.com/v1/products/reviews",
@@ -184,11 +206,15 @@ $(document).on("click", ".searchImg", function (event) {
 
 });
 
+
+//*********************************************************************************/
+
+
 // function to call Contextual Web Search api and render results
 function searchContextWeb() {
 
   $(".csDiv").empty();
- 
+
 
   $.ajaxSetup({
     beforeSend: function (xhr) {
@@ -196,48 +222,52 @@ function searchContextWeb() {
       xhr.setRequestHeader("X-RapidAPI-Key", "cf4c14600fmsh28f5e03d84eb654p195c42jsndb2ed0fb33e2");
     },
   });
-  
+
   var q = $("#search-input")
     .val()
     .trim();
 
 
   var queryURL = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?autoCorrect=true&pageNumber=1&pageSize=10&q=" + q + "&safeSearch=false";
-  
+
   $.ajax({
-  url: queryURL,
-  method: "GET",
+    url: queryURL,
+    method: "GET",
   }).then(function (response) {
-    
+
     var results = response.value;
-    
+
     for (var i = 0; i < results.length; i++) {
-      
-     var csDiv = $("<div>").addClass("csDiv");
-     
+
+      var csDiv = $("<div>").addClass("csDiv");
+
       var csTitle = results[i].title;
+
       var csDescription = results[i].description;
+
       var csURL = results[i].url;
-      
+
       var titleHeading = $("<h3>").html(csTitle);
+
       var p = $("<p>").html(csDescription);
+
       var pURL = $("<h6>").text(csURL);
-      
-      
+
+
       csDiv.append(titleHeading);
       csDiv.append(p);
       csDiv.append(pURL);
-      
+
       $("#context-content").prepend(csDiv);
-      
+
     }
-    
-    
+
+
     console.log(response);
     console.log(response.value);
     console.log(response.value[0].title);
     console.log(response.value[0].url);
   });
-  
-  };
+
+};
 
