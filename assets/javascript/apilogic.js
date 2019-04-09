@@ -4,8 +4,12 @@ $("#submit").on("click", function () {
   event.preventDefault();
   console.log("test");
 
-  searchAliExpress();
-  searchContextWeb();
+  var q = $("#search-input")
+  .val()
+  .trim();
+
+  searchAliExpress(q);
+  searchContextWeb(q);
 });
 
 
@@ -13,16 +17,16 @@ $("#submit").on("click", function () {
 
 
 // function to call AliExpress api and render results  
-function searchAliExpress() {
+function searchAliExpress(searchItem) {
 
   // clear info from prior request
   $(".imageDiv").empty();
   $(".reviewDiv").empty();
 
   // grab user input
-  var item = $("#search-input")
-    .val()
-    .trim();
+  // var item = $("#search-input")
+  //   .val()
+  //   .trim();
 
   // test object
   var mytest = {
@@ -37,7 +41,7 @@ function searchAliExpress() {
     "skip": 20
   };
 
-  mytest.text = item;
+  mytest.text = searchItem;
   //mytest.text = "radio";
 
 
@@ -93,12 +97,20 @@ function searchAliExpress() {
         target: "_blank"
       });
 
+      var itemRating;
+
+      if (typeof response.items[i].ratings != 'undefined')   {
+          itemRating = response.items[i].ratings;
+
+      }
+      else
+      {   itemRating = 'NA';}
 
       var pTitle = $("<p>").addClass("itemTitle").text("Title: " + response.items[i].title);
 
       pTitle.css("width", "300px");
 
-      var pPrice = $("<p>").addClass("itemPrice").html("Price: $" + response.items[i].priceOptions[0].amount.value + " " + "<b> Rating:</b> " + response.items[i].ratings + " ");
+      var pPrice = $("<p>").addClass("itemPrice").html("Price: $" + response.items[i].priceOptions[0].amount.value + " " + "<b> Rating:</b> " + itemRating + " ");
 
       // pPrice.append(anch);
       var itemImage = $("<img>").addClass("searchImg");
@@ -111,6 +123,7 @@ function searchAliExpress() {
       });
 
       itemImage.attr("itemId", response.items[i].id);
+      itemImage.attr( "Title", response.items[i].title);
 
       gifDiv.prepend(anch);
       gifDiv.prepend(pPrice);
@@ -131,6 +144,10 @@ $(document).on("click", ".searchImg", function (event) {
 
   event.preventDefault();
   //event.stopPropagation();
+
+  var itemTitle = $(this).attr("Title");
+
+  var pdescr = $("<p>").html("<b>" +itemTitle +"</b>");
 
   if (event.target.localName == "img") {
 
@@ -164,7 +181,8 @@ $(document).on("click", ".searchImg", function (event) {
           gifDiv.css({
             "margin-left": "45px;",
             "margin-right": "20px",
-            "width": "300px"
+            "width": "300px",
+            "margin-top":"20px"
           });
           var translateR = xhr.reviews[i].translatedReview;
 
@@ -192,6 +210,7 @@ $(document).on("click", ".searchImg", function (event) {
           } else {
             gifDiv.prepend(pReview);
             gifDiv.prepend(pTitle);
+            gifDiv.prepend(pdescr);
           }
           $("#writtenReviewsBox").prepend(gifDiv);
         }
@@ -205,13 +224,24 @@ $(document).on("click", ".searchImg", function (event) {
   };
 
 });
+$(document).on("click", ".searchBtn", function (event) {
+  event.preventDefault();
+  //event.stopPropagation();
 
+  var strItem = $(this).attr("data-name");
+  $("#search-input").text(strItem);
+  
+
+  searchAliExpress(strItem);
+  searchContextWeb(strItem);
+
+});
 
 //*********************************************************************************/
 
 
 // function to call Contextual Web Search api and render results
-function searchContextWeb() {
+function searchContextWeb(searchItem) {
 
   $(".csDiv").empty();
 
@@ -223,9 +253,10 @@ function searchContextWeb() {
     },
   });
 
-  var q = $("#search-input")
-    .val()
-    .trim();
+  q= searchItem;
+  // var q = $("#search-input")
+  //   .val()
+  //   .trim();
 
 
   var queryURL = "https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/WebSearchAPI?autoCorrect=true&pageNumber=1&pageSize=10&q=" + q + "&safeSearch=false";
@@ -242,21 +273,23 @@ function searchContextWeb() {
       var csDiv = $("<div>").addClass("csDiv");
 
       var csTitle = results[i].title;
-
       var csDescription = results[i].description;
-
       var csURL = results[i].url;
 
+      var csAnch = $("<a>").addClass("infoLink").text(csURL);
+      csAnch.attr({
+        href: csURL, target: "_blank"
+      });
+
+
       var titleHeading = $("<h3>").html(csTitle);
-
       var p = $("<p>").html(csDescription);
-
-      var pURL = $("<h6>").text(csURL);
+      // var pURL = $("<h6>").text(csURL);
 
 
       csDiv.append(titleHeading);
       csDiv.append(p);
-      csDiv.append(pURL);
+      csDiv.append(csAnch);
 
       $("#context-content").prepend(csDiv);
 
