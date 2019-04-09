@@ -54,7 +54,7 @@ function searchAliExpress(searchItem) {
     method: "POST",
     timeout: 0,
     headers: {
-      "X-API-CLIENT-ID": "RMNDONTFHMUUTXZP",
+      "X-API-CLIENT-ID": "NYODHSXYXONWCIZP",
       "Content-Type": "application/json",
       "cache-control": "no-cache",
       "Postman-Token": "ee780696-5614-44fd-8d0e-2d815309f864"
@@ -169,7 +169,7 @@ $(document).on("click", ".searchImg", function (event) {
       dataType: 'json',
       contentType: 'application/json',
       headers: {
-        "X-Api-Client-Id": "RMNDONTFHMUUTXZP"
+        "X-Api-Client-Id": "NYODHSXYXONWCIZP"
       },
       data: JSON.stringify(mytestReview),
       success: function (xhr) {
