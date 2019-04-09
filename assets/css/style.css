@@ -308,7 +308,9 @@ textarea {
   height: 200px;
 }
 
-
+#searchesHere {
+  margin-right: 20px;
+}
 
 
 
@@ -352,6 +354,10 @@ body {
  
 #sessionSearch {
 border-bottom: solid #ffffff 2px;
+display: flex;  
+align-items: center;
+flex-flow: row wrap;
+
 }
 
 #gifDiv {
@@ -378,5 +384,7 @@ border-bottom: solid #ffffff 2px;
   color: #000066;
 }
 
-
+.searchBtn { 
+  margin-left: 15px;
+}
 

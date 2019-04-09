@@ -14,7 +14,7 @@ $(document).ready(function () {
   //*********************************************************************************/
 
 
-  var database = firebase.database();
+  // var database = firebase.database();
   var searchRef = firebase
     .database()
     .ref()
@@ -27,10 +27,10 @@ $(document).ready(function () {
 
 
   //On click event to add user input to firebase
-  var database = firebase
-    .database()
-    .ref()
-    .child("RecentSearches");
+  // var database = firebase
+  //   .database()
+  //   .ref()
+  //   .child("RecentSearches");
   $("#submit").on("click", function (event) {
     event.preventDefault();
 
@@ -52,9 +52,9 @@ $(document).ready(function () {
 
 
   //***********************************************************
-mytest.text = searchItem;
-mytest.priceRange.from = $("#from").val();
-mytest.priceRange.to = $("#To").val();
+// mytest.text = searchItem;
+// mytest.priceRange.from = $("#from").val();
+// mytest.priceRange.to = $("#To").val();
 //**********************************************************
 
 
@@ -69,7 +69,7 @@ mytest.priceRange.to = $("#To").val();
       // created a div to put the recent searchs , making button. 
       // Empty the div after everysearch to create the buttons cause we are going to recreate all of the searches
 
-      var childVal;
+      // var childVal;
       result = childSnapshot.val();
       // iterate through all the children records. 
       childSnapshot.forEach(function (child) {
@@ -100,6 +100,6 @@ mytest.priceRange.to = $("#To").val();
     // text to the button
     newButton.text(searchStr);
 
-    $("#searchesHere").append(newButton);
+    $("#searchesHere").prepend(newButton);
   }
 });
