@@ -48,4 +48,5 @@ ProductGenie is a shopping tool designed to give the buyer context to aid in the
 <br>
  
 #### Backlink References:
-https://sandtr0ut.github.io/Responsive-Portfolio/portfolio.html
+
+https://zmanphx.github.io/project1_productGenie/
